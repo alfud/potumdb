@@ -5,12 +5,12 @@
   align-items: center;
 }
 .button{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 3rem;
-  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 50rem;
-  border: 0.5rem solid white;
+  border: 0.4rem solid white;
   color: #1f1f1f;
   background: rgb(247,230,214);
   background: linear-gradient(90deg, rgba(247,230,214,1) 0%, rgba(234,196,175,1) 100%);
