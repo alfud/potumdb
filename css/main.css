@@ -33,7 +33,7 @@ margin: 0;
   display: flex;
   justify-content: space-between;
   height: 3rem;
-  background-color: #121212;
+  background-color: #121212d0;
   padding: 0 1.5rem;
   align-items: center;
 }
@@ -56,7 +56,7 @@ margin: 0;
   right: 0;
   text-align: center;
   font-size: 1rem;
-  background-color: #121212;
+  background-color: #121212d0;
   color: white;
   margin-top: 5px;
   padding: 0.25rem 0;
