@@ -23,17 +23,27 @@
   src: url('../fonts/roboto-v32-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+html{
+  height: 100%;
+}
+
 body{
-font-family: roboto, Arial, Helvetica, sans-serif;
+font-family: roboto, Arial, sans-serif;
+font-size: 1.125rem;
 background-image: url("../media/bg_sakura.webp");
 margin: 0;
+display: flex;
+flex-direction: column;
+min-height: 100%;
 }
 
 .header{
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   height: 3rem;
-  background-color: #121212d0;
+  background-color: #121212;
   padding: 0 1.5rem;
   align-items: center;
 }
@@ -46,19 +56,16 @@ margin: 0;
 
 .toramdblogo{
   height: 2.2rem;
-
 }
 
 .footer{
-  position: absolute;
+  position: sticky;
   bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
   font-size: 1rem;
-  background-color: #121212d0;
+  background-color: #121212;
   color: white;
-  margin-top: 5px;
+  margin-top: auto;
   padding: 0.25rem 0;
   font-weight: bold;
 }
