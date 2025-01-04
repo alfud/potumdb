@@ -52,6 +52,10 @@ flex-direction: column;
 min-height: 100%;
 }
 
+body a{
+  text-decoration: none;
+}
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -67,7 +71,6 @@ min-height: 100%;
 .header a{
   font-size: 1.2rem;
   color: var(--text-color);
-  text-decoration: none;
 }
 
 .toramdblogo{
