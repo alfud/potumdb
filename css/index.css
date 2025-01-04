@@ -6,14 +6,14 @@
 }
 .button{
   font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
   padding: 0.4rem 0.8rem;
-  border: 4px solid rgb(255, 255, 255);
+  border: 2px solid var(--border-color);
   border-radius: 50rem;
-  color: #1f1f1f;
-  background-color: rgb(199, 215, 238);
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.25);
   align-content: center;
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -22,4 +22,5 @@
 
 .button:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 0.5rem 0.25rem var(--shadow-color);
 }
