@@ -34,6 +34,7 @@
   --text-color: #d1d7e0;
   --accent-color: #347d39;
   --shadow-color: rgba(167, 157, 255, 0.4);
+  --border-color: rgb(128, 168, 255);
 }
 
 html{
