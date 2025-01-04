@@ -69,12 +69,11 @@ body a{
 }
 
 .header a{
-  font-size: 1.2rem;
   color: var(--text-color);
 }
 
-.toramdblogo{
-  height: 2.2rem;
+.header img{
+  height: 1.125rem;
 }
 
 .footer{
