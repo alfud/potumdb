@@ -42,7 +42,7 @@ html{
 }
 
 body{
-font-family: Noto Sans, Arial;
+font-family: Noto Sans;
 font-size: 1.125rem;
 color: var(--text-color);
 background-color: var(--bg-color);
