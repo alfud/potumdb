@@ -46,6 +46,7 @@ body a{
 }
 
 .header a{
+  /*this display flex centers the logo*/
   display: flex;
   justify-content: center;
   align-items: center;
