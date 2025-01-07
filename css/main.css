@@ -46,6 +46,9 @@ body a{
 }
 
 .header a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-color);
 }
 
