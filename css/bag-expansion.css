@@ -1,0 +1,27 @@
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table{
+  border-collapse: collapse;
+  background-color: hsl(214, 20%, 15%);
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: .5rem;
+}
+
+tr:nth-child(even){
+  background-color: hsl(214, 20%, 30%);
+}
+
+th {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+  }
