@@ -10,7 +10,7 @@ main{
 .skill-class{
   font-size: 1.5rem;
   font-weight: 500;
-  min-width: 16rem;
+  min-width: 16.5rem;
   padding: 0.4rem 0.8rem 0.4rem 0.5rem ;
   border: 2px solid var(--border-color);
   border-radius: 50rem;
