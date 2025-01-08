@@ -17,6 +17,10 @@
   --border-color: rgb(128, 168, 255);
 }
 
+html{
+  height: 100%;
+}
+
 body{
 font-family: Noto Sans;
 font-size: 1.125rem;
