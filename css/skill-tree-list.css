@@ -1,16 +1,17 @@
 main{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 2rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ justify-items: center;
+ gap: 2rem; 
+ padding-left: 2rem;
+ padding-right: 2rem;
 }
-
-
 
 .skill-class{
   font-size: 1.5rem;
   font-weight: 500;
-  min-width: 16.5rem;
+  min-width: 16.8rem;
+  max-width: 18rem;
   padding: 0.4rem 0.8rem 0.4rem 0.5rem ;
   border: 2px solid var(--border-color);
   border-radius: 50rem;
@@ -39,4 +40,25 @@ margin-right: 0.6rem;
   padding: 1px;
   border: 2px rgb(128, 128, 128) solid;
   border-radius: 50rem;
+}
+
+@media (max-width: 85rem){
+  main{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 60rem){
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 37rem){
+  main{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
