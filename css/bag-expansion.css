@@ -1,11 +1,3 @@
-@media (min-width: 30rem) {
-  main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 table{
   border-collapse: collapse;
   background-color: hsl(214, 20%, 15%);
@@ -26,4 +18,22 @@ th {
   text-align: left;
   background-color: #04AA6D;
   color: white;
+  }
+
+  @media (min-width: 30rem) {
+    main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 30rem){
+    table{
+      font-size: .75rem;
+    }
+
+    td, th {
+      padding: .3rem;
+    }
   }
