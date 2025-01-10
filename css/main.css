@@ -22,7 +22,7 @@ html{
 }
 
 body{
-  font-family: Noto Sans;
+  font-family: Noto Sans, Arial;
   font-size: 1.125rem;
   background-color: var(--bg-color);
   display: flex;
