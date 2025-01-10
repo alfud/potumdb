@@ -22,12 +22,12 @@ html{
 }
 
 body{
-font-family: Noto Sans;
-font-size: 1.125rem;
-background-color: var(--bg-color);
-display: flex;
-flex-direction: column;
-padding: 5rem 0 4rem 0;
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 4rem 0;
 }
 
 .header{
