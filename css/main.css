@@ -23,7 +23,7 @@ html{
 
 body{
   font-family: Noto Sans, Arial;
-  font-size: 1.125rem;
+  font-size: clamp(0.75rem, 1.5vw, 1.125rem);
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@ body{
 .header a{
   /*this display flex centers the logo*/
   width: 100%;
+  font-size: 1.125rem;
   display: flex;
   justify-content: center;
 }
