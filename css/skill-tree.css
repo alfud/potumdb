@@ -1,0 +1,72 @@
+main{
+  padding: 0 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card{
+  background-color: hsl(214, 20%, 30%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.25);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.skill-section-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-section-1-left-container{
+  display: grid;
+  grid-template-rows: auto;
+  gap: 0.5rem;
+}
+
+.skill-section-1-left-container-top{
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 1rem;
+}
+
+.skill-section-1-right-container{
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.skill-image-container{
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50rem;
+  height: 2.1rem;
+}
+
+.skill-name, h1{
+  font-size: 1.5rem;
+}
+
+.skill-section-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  text-wrap: nowrap;
+}
+
+.skill-section-2-grid-child{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: self-end;
+}
+
+.highlight{
+  color: #95c3ff;
+  font-weight: 700;
+}
+
+@media (min-width: 30rem) {
+  main{
+    padding: 0 1rem;
+  } 
+}
