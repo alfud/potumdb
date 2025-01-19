@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords"
     content="ToramDB, Toram Online, Game Guide, MMORPG, Android Game, iOS Game, Asobimo, Toram Online Database, Skill list, Bag Expansion, MQ exp, Quest Calculator" />
-  <meta name="description"
-    content="Toram Online Database" />
-  <link rel='shortcut icon' type='image/x-icon' href="https://raw.githubusercontent.com/Lixeira/toramdb/refs/heads/main/favicon.ico" />
+  <meta name="description" content="Toram Online Database" />
+  <link rel='shortcut icon' type='image/x-icon'
+    href="https://raw.githubusercontent.com/Lixeira/toramdb/refs/heads/main/favicon.ico" />
   <link rel="stylesheet" href="../css/skill-tree.css">
   <link rel="stylesheet" href="../css/main.css" />
   <title>Skill Trees</title>
 </head>
+
 <body>
   <header class="header">
     <div>
@@ -19,11 +21,11 @@
         <img src="https://raw.githubusercontent.com/Lixeira/toramdb/refs/heads/main/media/logo.svg" alt="ToramDB logo">
       </a>
     </div>
-      <div>
-        <a target="_blank" href="https://discord.com/users/1053259863569989652">
-          Contact Me
-        </a>
-      </div>
+    <div>
+      <a target="_blank" href="https://discord.com/users/1053259863569989652">
+        Contact Me
+      </a>
+    </div>
   </header>
 
   <main class="animate">
@@ -33,7 +35,7 @@
       <div class="card">
 
         <!--Section 1 contains skill name, image, tier level, available weapons-->
-        <div class="skill-section-1"> 
+        <div class="skill-section-1">
 
           <div class="skill-section-1-left-container">
             <div class="skill-section-1-left-container-top">
@@ -56,11 +58,12 @@
 
           <div class="skill-section-1-right-container">
             <div class="weapon-image-container">
-              <img class="weapon-image" src="" alt="">
+              <img class="weapon-image" src="./icon/ohs.png" alt="">
+              <img class="weapon-image" src="./icon/ths.png" alt="">
             </div>
 
             <!-- Available classes written in text -->
-            <div></div>
+            <div>1-Handed Sword/2-Handed Sword only</div>
           </div>
 
         </div>
@@ -77,7 +80,7 @@
             <div class="skill-section-2-grid-child">
               Weapon Dependent</div>
           </div>
-          
+
           <div class="skill-section-2-grid-child">
             <div class="skill-section-2-grid-child  highlight">MP</div>
             <div class="skill-section-2-grid-child">100</div>
@@ -114,14 +117,131 @@
         <div class="skill-section-5">
           <details>
             <summary>Additional information</summary>
-            <div class="additional-information">
-<!-- This needs rewrork cuz text dosent align properly -->
- <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora accusamus accusantium provident aut laborum doloribus eius impedit mollitia quia enim explicabo ducimus, quos repudiandae libero id perferendis aspernatur a!</pre>
-            </div>
+            <br><span class="sub-title"><b>Weapon:</b></span>
+            <select id="hardHitWeapon" onchange="calcHardHitValue()">
+              <option value="1H" selected="">1-Handed Sword</option>
+              <option value="2H">2-Handed Sword</option>
+            </select><br>
+            <span class="sub-title"><b>Skill Level:</b></span>
+            <select id="hardHitLevel" onchange="calcHardHitValue()">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10" selected="">10</option>
+            </select><br>
+            <span class="sub-title"><b>"Hard Hit Enhancer" Registlet Level:</b></span>
+            <select id="hardHitRegistlet" onchange="calcHardHitValue()">
+              <option value="0" selected="">Unequipped</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+            </select><br>
+            <br>
+            <span id="hardHitValue">
+              <li><b>Skill Constant:</b> 100</li>
+              <li><b>Skill Multiplier:</b> 1.5</li><br>
+              <li><b>Flinch Chance:</b> 100%</li>
+              <li><b>Flinch Duration:</b> 2 seconds</li>
+              <li><b>Resistance Duration on Difficulties:</b> 3 second (<b>Easy</b> and <b>Normal</b>); 5 seconds
+                (<b>Hard</b>); 8 seconds (<b>Nightmare</b>); 11 seconds (<b>Ultimate</b>)</li><br><b>Extra info:</b>
+              <li><b>Ailment Resistance Duration</b> starts upon successfully inflicting the corresponding ailment; most
+                ailments have the same resistance duration as their own duration, unless stated otherwise</li>
+              <li>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main
+                  weapon</b></li>
+            </span>
+
+            <script>
+              function calcHardHitConstant(level, result) {
+                var constant = Math.floor(50 + 5 * level)
+                result.innerHTML = `<li><b>Skill Constant:</b> ${constant}</li>`
+              }
+
+              function calcHardHitMultiplier(level, registlet, weapon, result) {
+                var multiplier = 1 + (0.05 * level) + (0.05 * registlet)
+                if (weapon == "2H") { multiplier += 0.5 }
+                if (multiplier - Math.floor(multiplier * 100) / 100 < 0.0099) { multiplier = Math.floor(multiplier * 100) / 100 }
+                else { multiplier = Math.round(multiplier * 100) / 100 }
+                result.innerHTML += `<li><b>Skill Multiplier:</b> ${multiplier}</li><br>`
+              }
+
+              function calcAilmentChanceHardHit(level, weapon, result) {
+                var chance = 5
+                //The next "if" is pretty much required; the game uses a weird function called Math.RoundToInt, and only for Hard Hit; go figure why
+                //If the number has no decimal, there's nothing left to do
+                if (4.5 * level == (4.5 * level).toFixed(0)) {
+                  chance += parseInt((4.5 * level).toFixed(0), 10)
+                  //If the decimal part is equal to 0.5 (it will be either 0 or 0.5), then the game rounds it up or down to the nearest even number
+                }
+                else if ((4.5 * level).toFixed(0) % 2 == 0) {
+                  //Checking if the rounded up number is even
+                  chance += parseInt((4.5 * level).toFixed(0), 10)
+                }
+                else {
+                  //If it's odd, then round it down
+                  chance += parseInt((4.5 * level).toFixed(0)) - 1
+                }
+
+                if (weapon == "1H") { chance += 50 }
+                result.innerHTML += `<li><b>Flinch Chance:</b> ${chance}%</li>`
+              }
+
+              function addHardHitAilmentInfo(result) {
+                result.innerHTML += `<li><b>Flinch Duration:</b> 2 seconds</li>
+                    <li><b>Resistance Duration on Difficulties:</b> 3 second (<b>Easy</b> and <b>Normal</b>); 5 seconds (<b>Hard</b>); 8 seconds (<b>Nightmare</b>); 11 seconds (<b>Ultimate</b>)</li>`
+              }
+
+              function addHardHitExtraInfo(result) {
+                result.innerHTML += `<br><b>Extra info:</b>
+                    <li><b>Ailment Resistance Duration</b> starts upon successfully inflicting the corresponding ailment; most ailments have the same resistance duration as their own duration, unless stated otherwise</li>
+                    <li>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b></li>`
+              }
+
+              function calcHardHitValue() {
+                let weaponSelector = document.getElementById("hardHitWeapon")
+                let weapon = weaponSelector[weaponSelector.selectedIndex].value
+                let levelSelector = document.getElementById("hardHitLevel")
+                let level = levelSelector[levelSelector.selectedIndex].value
+                let registletSelector = document.getElementById("hardHitRegistlet")
+                let registlet = registletSelector[registletSelector.selectedIndex].value
+                let result = document.getElementById("hardHitValue")
+                calcHardHitConstant(level, result)
+                calcHardHitMultiplier(level, registlet, weapon, result)
+                calcAilmentChanceHardHit(level, weapon, result)
+                addHardHitAilmentInfo(result)
+                addHardHitExtraInfo(result)
+              }
+
+              calcHardHitValue();
+            </script>
           </details>
         </div>
-
+        </details>
       </div>
+
+    </div>
 
     </div>
 
@@ -129,4 +249,5 @@
 
   <footer class="footer">Made with ❤️ by: Xirine</footer>
 </body>
+
 </html>

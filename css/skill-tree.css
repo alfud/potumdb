@@ -36,28 +36,47 @@ main{
   grid-template-rows: auto;
 }
 
-.skill-image-container{
-  display: inline-block;
+.skill-image-container img{
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50rem;
-  height: 2.1rem;
+  height: 34px;
 }
 
 .skill-name, h1{
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.skill-section-1-right-container{
+display: grid;
+text-wrap: wrap;
 }
 
 .skill-section-2{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
   text-wrap: nowrap;
+}
+
+@media (min-width: 30rem){
+  .skill-section-2{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .skill-section-2-grid-child{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: self-end;
+}
+
+details{
+  text-wrap: wrap;
+}
+
+select{
+  background-color: var(--Tertiary-colors);
+  padding: 0.1rem;
+  border-radius: 0.2rem;
 }
 
 .highlight{
