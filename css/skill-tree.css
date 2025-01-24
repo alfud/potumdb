@@ -5,6 +5,11 @@ main{
   gap: 1.5rem;
 }
 
+.card-container{
+  display: grid;
+  gap: 1.5rem;
+}
+
 .card{
   background-color: hsl(214, 20%, 25%);
   border-radius: 0.5rem;
