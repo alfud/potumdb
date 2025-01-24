@@ -6,7 +6,7 @@ main{
 }
 
 .card{
-  background-color: hsl(214, 20%, 30%);
+  background-color: hsl(214, 20%, 25%);
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 0 0 0.25rem 0.125rem rgba(0, 0, 0, 0.25);
@@ -69,12 +69,29 @@ text-wrap: wrap;
   grid-template-columns: 1fr 1fr;
 }
 
+.skill-section-4{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 0.5rem;
+}
+
+.skill-section-4-grid-child{
+  display: grid;
+  grid-template-columns: 50px 1fr 2fr;
+}
+
 details{
   text-wrap: wrap;
 }
 
+summary{
+  color: rgb(255, 208, 0);
+  font-weight: 700;
+}
+
 select{
   background-color: var(--Tertiary-colors);
+  font-family: noto sans;
   padding: 0.1rem;
   border-radius: 0.2rem;
 }
@@ -84,8 +101,11 @@ select{
   font-weight: 700;
 }
 
-@media (min-width: 30rem) {
-  main{
-    padding: 0 1rem;
-  } 
+.highlight-green{
+  color: #aeff95;
+  font-weight: 700;
+}
+
+.bold{
+  font-weight: 700;
 }
