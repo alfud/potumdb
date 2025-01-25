@@ -31,6 +31,7 @@ body{
 }
 
 .header{
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -57,6 +58,7 @@ body{
 }
 
 .footer{
+  z-index: 100;
   position: fixed;
   bottom: 0;
   right: 0;
