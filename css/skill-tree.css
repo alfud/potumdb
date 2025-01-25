@@ -45,13 +45,15 @@ main{
 }
 
 .skill-image-container img{
-  background-color: rgba(0, 0, 0, 0.8);
+  box-sizing: content-box;
+  background-color: hsl(0, 0%, 10%);
+  border: 2px solid hsl(0, 0%, 10%);
   border-radius: 50rem;
   height: 34px;
 }
 
 .skill-name, h1{
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .skill-section-1-right-container{
@@ -80,7 +82,7 @@ text-wrap: wrap;
 .skill-section-4{
   display: grid;
   grid-template-columns: auto;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .skill-section-4-grid-child{

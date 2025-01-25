@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <main class="animate">
+  <main>
 
     <div class="card-container">
 
@@ -123,8 +123,8 @@
                 1-Handed Sword
               </div>
               <div>
-                <div class="highlight-green">[Get the same effect when used with Dual Swords]</div>
                 <div>Flinch Rate +50%</div>
+                <div class="highlight-green">[Get the same effect when used with Dual Swords]</div>
               </div>
           </div>
 
@@ -278,11 +278,11 @@
           <div class="skill-section-1-left-container">
             <div class="skill-section-1-left-container-top">
               <div class="skill-image-container">
-                <img class="skill-icon" src="./icon/hardhit.png" alt="">
+                <img class="skill-icon" src="./icon/astute.png" alt="">
               </div>
 
               <div class="skill-name">
-                <h1>Hard Hit</h1>
+                <h1>Astute</h1>
               </div>
             </div>
 
@@ -323,7 +323,9 @@
 
           <div class="skill-section-2-grid-child">
             <div class="skill-section-2-grid-child  highlight">MP</div>
-            <div class="skill-section-2-grid-child">100</div>
+            <div class="skill-section-2-grid-child">
+              1hs: 100; 2hs: 200
+            </div>
           </div>
 
           <div class="skill-section-2-grid-child">
@@ -347,7 +349,9 @@
         <!-- Section 3 contains in game description -->
         <div class="skill-section-3">
           <div class="highlight">Game Description</div>
-          <div>Brutally hit the target with the weapon. Chance to inflict [Flinch] on the target.</div>
+          <div>
+            Strongly hit the target in rapid motion. Critical Rate +25 when this skill is activated.
+          </div>
         </div>
 
         <!-- section 4 contains class specific bonuses -->
@@ -361,8 +365,8 @@
                 1-Handed Sword
               </div>
               <div>
+                <div>MP Cost -100</div>
                 <div class="highlight-green">[Get the same effect when used with Dual Swords]</div>
-                <div>Flinch Rate +50%</div>
               </div>
           </div>
 
@@ -375,6 +379,7 @@
             </div>
             <div>
               <div>Power +50</div>
+              <div>Boosts Critical Rate Buff</div>
             </div>
           </div>
 
@@ -383,130 +388,285 @@
         <!-- section 5 contains additional information regarding the skill -->
         <div class="skill-section-5">
           <details>
-            <summary>Additional information</summary>
-            <br><span class="sub-title"><b>Weapon:</b></span>
-            <select id="hardHitWeapon" onchange="calcHardHitValue()">
-              <option value="1H" selected="">1-Handed Sword</option>
-              <option value="2H">2-Handed Sword</option>
+            <summary>Additional information</summary><br><span class="sub-title"><b>Weapon:</b></span>
+            <select id="astuteWeapon" onchange="calcAstuteValues()">
+                <option value="1H" selected="">1-Handed Sword</option>
+                <option value="2H">2-Handed Sword</option>
             </select><br>
             <span class="sub-title"><b>Skill Level:</b></span>
-            <select id="hardHitLevel" onchange="calcHardHitValue()">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10" selected="">10</option>
-            </select><br>
-            <span class="sub-title"><b>"Hard Hit Enhancer" Registlet Level:</b></span>
-            <select id="hardHitRegistlet" onchange="calcHardHitValue()">
-              <option value="0" selected="">Unequipped</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
+            <select id="astuteLevel" onchange="calcAstuteValues()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="">10</option>
             </select><br>
             <br>
-            <span id="hardHitValue">
-              <li><b>Skill Constant:</b> 100</li>
-              <li><b>Skill Multiplier:</b> 1.5</li><br>
-              <li><b>Flinch Chance:</b> 100%</li>
-              <li><b>Flinch Duration:</b> 2 seconds</li>
-              <li><b>Resistance Duration on Difficulties:</b> 3 second (<b>Easy</b> and <b>Normal</b>); 5 seconds
-                (<b>Hard</b>); 8 seconds (<b>Nightmare</b>); 11 seconds (<b>Ultimate</b>)</li><br><b>Extra info:</b>
-              <li><b>Ailment Resistance Duration</b> starts upon successfully inflicting the corresponding ailment; most
-                ailments have the same resistance duration as their own duration, unless stated otherwise</li>
-              <li>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main
-                  weapon</b></li>
-            </span>
-
+            <span id="astuteValues"><li><b>MP Cost:</b> 100</li><li><b>Skill Constant:</b> 200</li><li><b>Skill Multiplier:</b> 2.5</li><br><li><b>Motion Speed</b> of <b>Astute</b> +50%</li><li>Grants <b>Astute buff</b> upon successful cast</li>
+                <br><b>Buff Effect:</b>
+                <li><b>Critical Rate</b> +25</li>
+                <li><b>Buff Duration:</b> 10 seconds</li><br>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b></span>
+            
             <script>
-              function calcHardHitConstant(level, result) {
-                var constant = Math.floor(50 + 5 * level)
-                result.innerHTML = `<li><b>Skill Constant:</b> ${constant}</li>`
-              }
-
-              function calcHardHitMultiplier(level, registlet, weapon, result) {
-                var multiplier = 1 + (0.05 * level) + (0.05 * registlet)
-                if (weapon == "2H") { multiplier += 0.5 }
-                if (multiplier - Math.floor(multiplier * 100) / 100 < 0.0099) { multiplier = Math.floor(multiplier * 100) / 100 }
-                else { multiplier = Math.round(multiplier * 100) / 100 }
-                result.innerHTML += `<li><b>Skill Multiplier:</b> ${multiplier}</li><br>`
-              }
-
-              function calcAilmentChanceHardHit(level, weapon, result) {
-                var chance = 5
-                //The next "if" is pretty much required; the game uses a weird function called Math.RoundToInt, and only for Hard Hit; go figure why
-                //If the number has no decimal, there's nothing left to do
-                if (4.5 * level == (4.5 * level).toFixed(0)) {
-                  chance += parseInt((4.5 * level).toFixed(0), 10)
-                  //If the decimal part is equal to 0.5 (it will be either 0 or 0.5), then the game rounds it up or down to the nearest even number
-                }
-                else if ((4.5 * level).toFixed(0) % 2 == 0) {
-                  //Checking if the rounded up number is even
-                  chance += parseInt((4.5 * level).toFixed(0), 10)
-                }
-                else {
-                  //If it's odd, then round it down
-                  chance += parseInt((4.5 * level).toFixed(0)) - 1
-                }
-
-                if (weapon == "1H") { chance += 50 }
-                result.innerHTML += `<li><b>Flinch Chance:</b> ${chance}%</li>`
-              }
-
-              function addHardHitAilmentInfo(result) {
-                result.innerHTML += `<li><b>Flinch Duration:</b> 2 seconds</li>
-                    <li><b>Resistance Duration on Difficulties:</b> 3 second (<b>Easy</b> and <b>Normal</b>); 5 seconds (<b>Hard</b>); 8 seconds (<b>Nightmare</b>); 11 seconds (<b>Ultimate</b>)</li>`
-              }
-
-              function addHardHitExtraInfo(result) {
-                result.innerHTML += `<br><b>Extra info:</b>
-                    <li><b>Ailment Resistance Duration</b> starts upon successfully inflicting the corresponding ailment; most ailments have the same resistance duration as their own duration, unless stated otherwise</li>
-                    <li>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b></li>`
-              }
-
-              function calcHardHitValue() {
-                let weaponSelector = document.getElementById("hardHitWeapon")
-                let weapon = weaponSelector[weaponSelector.selectedIndex].value
-                let levelSelector = document.getElementById("hardHitLevel")
-                let level = levelSelector[levelSelector.selectedIndex].value
-                let registletSelector = document.getElementById("hardHitRegistlet")
-                let registlet = registletSelector[registletSelector.selectedIndex].value
-                let result = document.getElementById("hardHitValue")
-                calcHardHitConstant(level, result)
-                calcHardHitMultiplier(level, registlet, weapon, result)
-                calcAilmentChanceHardHit(level, weapon, result)
-                addHardHitAilmentInfo(result)
-                addHardHitExtraInfo(result)
-              }
-
-              calcHardHitValue();
+            function calcAstuteMpCost(weapon, result) {
+              var cost = 200
+              if (weapon == "1H") {cost -= 100}
+              result.innerHTML = `<li><b>MP Cost:</b> ${cost}</li>`
+            }
+            
+            function calcAstuteConstant(level, result) {
+                var constant = Math.floor(150 + 5*level)
+                result.innerHTML += `<li><b>Skill Constant:</b> ${constant}</li>`
+            }
+            
+            function calcAstuteMultiplier(level, weapon, result) {
+                var multiplier = 1.5 + (0.1 * level)
+                if (weapon == "2H") {multiplier += 0.5}
+                result.innerHTML += `<li><b>Skill Multiplier:</b> ${multiplier}</li>`
+            }
+            
+            function calcAstuteMotionSpeed(level, result){
+              var motionSpeed = 5 * level
+              result.innerHTML += `<br><li><b>Motion Speed</b> of <b>Astute</b> +${motionSpeed}%</li>`
+            }
+            
+            function calcAstuteBuffEffect(level, weapon, result) {
+              var crit = 25
+              var duration = 5
+              if (weapon == "2H") {crit *= 2}
+              if(level > 5) {duration *= 2}
+                result.innerHTML += `<li>Grants <b>Astute buff</b> upon successful cast</li>
+                <br><b>Buff Effect:</b>
+                <li><b>Critical Rate</b> +${crit}</li>
+                <li><b>Buff Duration:</b> ${duration} seconds</li>`
+            }
+            
+            function calcAstuteValues() {
+              let weaponSelector = document.getElementById("astuteWeapon")
+              let weapon = weaponSelector[weaponSelector.selectedIndex].value
+              let levelSelector = document.getElementById("astuteLevel")
+              let level = levelSelector[levelSelector.selectedIndex].value
+              let result = document.getElementById("astuteValues")
+              calcAstuteMpCost(weapon, result)
+              calcAstuteConstant(level, result)
+              calcAstuteMultiplier(level, weapon, result)
+              calcAstuteMotionSpeed(level, result)
+                calcAstuteBuffEffect(level, weapon, result)
+                result.innerHTML += `<br>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b>`
+            
+            }
+            calcAstuteValues()
             </script>
           </details>
         </div>
         </details>
       </div>
+
+      <div class="card" id="triggerslash">
+
+        <!--Section 1 contains skill name, image, tier level, available weapons-->
+        <div class="skill-section-1">
+
+          <div class="skill-section-1-left-container">
+            <div class="skill-section-1-left-container-top">
+              <div class="skill-image-container">
+                <img class="skill-icon" src="./icon/tiggerslash.png" alt="">
+              </div>
+
+              <div class="skill-name">
+                <h1>Trigger Slash</h1>
+              </div>
+            </div>
+
+            <div class="skill-section-1-left-container-bottom">
+              <!-- This contains the skill tier -->
+              <div>
+                Unlocks at tier level 2
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-section-1-right-container">
+            <div class="weapon-image-container">
+              <img class="weapon-image" src="./icon/ohs.png" alt="">
+              <img class="weapon-image" src="./icon/ths.png" alt="">
+            </div>
+
+            <!-- Available classes written in text -->
+            <div>1-Handed Sword/2-Handed Sword only</div>
+          </div>
+
+        </div>
+
+        <hr>
+
+        <!--section 2 contains skill type,element,mp cost, combo position(start,middle), skill range -->
+        <div class="skill-section-2">
+          <div class="skill-section-2-grid-child">
+            <div class="skill-section-2-grid-child highlight">Type</div>
+            <div class="skill-section-2-grid-child">Active, Physical</div>
+          </div>
+
+          <div class="skill-section-2-grid-child">
+            <div class="skill-section-2-grid-child  highlight">Element</div>
+            <div class="skill-section-2-grid-child">
+              Fire</div>
+          </div>
+
+          <div class="skill-section-2-grid-child">
+            <div class="skill-section-2-grid-child  highlight">MP</div>
+            <div class="skill-section-2-grid-child">
+              Lv1-5: 300mp; Lv6-10: 200mp
+            </div>
+          </div>
+
+          <div class="skill-section-2-grid-child">
+            <div class="skill-section-2-grid-child  highlight">Combo Start</div>
+            <div class="skill-section-2-grid-child">Yes</div>
+          </div>
+
+          <div class="skill-section-2-grid-child">
+            <div class="skill-section-2-grid-child  highlight">Combo Middle</div>
+            <div class="skill-section-2-grid-child">Yes</div>
+          </div>
+
+          <div class="skill-section-2-grid-child">
+            <div class="skill-section-2-grid-child  highlight">Range</div>
+            <div class="skill-section-2-grid-child">2</div>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Section 3 contains in game description -->
+        <div class="skill-section-3">
+          <div class="highlight">Game Description</div>
+          <div>
+            Put power while slashing the target. Enhance Attack MP Heal until the next skill. The motion speeds up one time by this skill.
+          </div>
+        </div>
+
+        <!-- section 4 contains class specific bonuses -->
+        <div class="skill-section-4">
+          
+          <div class="skill-section-4-grid-child">
+              <div>
+                <img src="./icon/ohs.png" alt="">
+              </div>
+              <div class="bold">
+                1-Handed Sword
+              </div>
+              <div>
+                <div>Perfect Aim</div>
+                <div class="highlight-green">[Get the same effect when used with Dual Swords]</div>
+              </div>
+          </div>
+
+          <div class="skill-section-4-grid-child">
+            <div>
+              <img src="./icon/ths.png" alt="">
+            </div>
+            <div class="bold">
+              2-Handed Sword
+            </div>
+            <div>
+              <div>Power +100</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- section 5 contains additional information regarding the skill -->
+        <div class="skill-section-5">
+          <details>
+            <summary>Additional information</summary><br><span class="sub-title"><b>Weapon:</b></span>
+            <select id="triggerWeapon" onchange="calcTriggerValues()">
+                <option value="1H" selected="">1-Handed Sword</option>
+                <option value="2H">2-Handed Sword</option>
+            </select><br>
+            <span class="sub-title"><b>Skill Level:</b></span>
+            <select id="triggerLevel" onchange="calcTriggerValues()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="">10</option>
+            </select><br>
+            <span class="sub-title"><b>"Elemental Trigger Slash" Registlet equipped:</b></span>
+            <input type="checkbox" id="triggerSlashElement" onchange="calcTriggerValues()"><br>
+            <br>
+            <span id="triggerValues"><li><b>MP Cost:</b> 200</li><li><b>Skill Constant:</b> 300</li><li><b>Skill Multiplier:</b> 2</li><li><b>Element:</b> Fire</li><br><li>This skill has the <b>Perfect Aim</b> attribute: it cannot [Miss] or [Graze], but can be [Evaded]</li><li>Grants <b>Trigger Slash buff</b> upon successful cast</li><br><b>Buff Effect:</b>
+              <li><b>Attack MP Recovery</b> +20</li>
+              <li>Sets the next skill's <b>Motion Speed</b> to +50%; <b>overrides</b> other <b>Motion Speed</b> effects such as <b>[Freeze]</b>, <b>Swift combo tag</b>, or <b>Chain Cast</b></li>
+                <li><b>Buff Duration:</b> Until a skill is used</li><br>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b></span>
+            
+            <script>
+            function calcTriggerSlashMpCost(level, result) {
+              var cost = 300
+              if (level > 5) {cost -= 100}
+              result.innerHTML = `<li><b>MP Cost:</b> ${cost}</li>`
+            }
+            
+            function calcTriggerSlashConstant(level, result) {
+                var constant = 200 + 10 * level
+                result.innerHTML += `<li><b>Skill Constant:</b> ${constant}</li>`
+            }
+            
+            function calcTriggerSlashMultiplier(level, weapon, result) {
+                var skillMultiplier = 1.5 + (0.05 * level)
+                if (weapon == "2H") {skillMultiplier += 1}
+                result.innerHTML += `<li><b>Skill Multiplier:</b> ${skillMultiplier}</li>`
+            }
+            
+            function addTriggerSkillEffect(weapon, registlet, result) {
+                var element = ``
+                if (registlet) {element = `Weapon Dependent`}
+                else {element = `Fire`}
+              var HTML = `<li><b>Element:</b> ${element}</li><br>`
+              if(weapon == "1H") {HTML += `<li>This skill has the <b>Perfect Aim</b> attribute: it cannot [Miss] or [Graze], but can be [Evaded]</li>`}
+              HTML += `<li>Grants <b>Trigger Slash buff</b> upon successful cast</li>`
+              result.innerHTML += HTML
+            }
+            
+            function calcTriggerBuffEffect(level, result) {
+              var AMPR = 2 * level
+              result.innerHTML += `<br><b>Buff Effect:</b>
+              <li><b>Attack MP Recovery</b> +${AMPR}</li>
+              <li>Sets the next skill's <b>Motion Speed</b> to +50%; <b>overrides</b> other <b>Motion Speed</b> effects such as <b>[Freeze]</b>, <b>Swift combo tag</b>, or <b>Chain Cast</b></li>
+                <li><b>Buff Duration:</b> Until a skill is used</li>`
+            }
+            
+            function calcTriggerValues() {
+                var weaponSelector = document.getElementById("triggerWeapon")
+              var weapon = weaponSelector[weaponSelector.selectedIndex].value
+                var levelSelector = document.getElementById("triggerLevel")
+                var level = levelSelector[levelSelector.selectedIndex].value
+                var registlet = document.getElementById("triggerSlashElement").checked
+              var result = document.getElementById("triggerValues")
+              calcTriggerSlashMpCost(level, result)
+              calcTriggerSlashConstant(level, result)
+              calcTriggerSlashMultiplier(level, weapon, result)
+              addTriggerSkillEffect(weapon, registlet, result)
+              calcTriggerBuffEffect(level, result)
+                result.innerHTML += `<br>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b>`
+            }
+            
+            calcTriggerValues()
+            </script>
+          </details>
+        </div>
+        </details>
+      </div> 
 
     </div>
 
