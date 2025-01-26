@@ -1,14 +1,14 @@
 @import url(font.css);
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   color: var(--text-color);
   text-decoration: none;
 }
 
-:root{
-  --bg-color : #212831;
+:root {
+  --bg-color: #212831;
   --secondary-color: #151b23;
   --Tertiary-colors: #262c36;
   --text-color: #d1d7e0;
@@ -17,20 +17,20 @@
   --border-color: rgb(128, 168, 255);
 }
 
-html{
+html {
   height: 100%;
 }
 
-body{
+body {
   font-family: Noto Sans, Arial;
-  font-size: clamp(0.75rem, 1.5vw, 1.125rem);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   padding: 5rem 0 4rem 0;
 }
 
-.header{
+.header {
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ body{
   align-items: center;
 }
 
-.header a{
+.header a {
   /*this display flex centers the logo*/
   width: 100%;
   font-size: 1.125rem;
@@ -53,11 +53,11 @@ body{
   justify-content: center;
 }
 
-.header img{
+.header img {
   height: 1.125rem;
 }
 
-.footer{
+.footer {
   z-index: 100;
   position: fixed;
   bottom: 0;
@@ -75,22 +75,23 @@ body{
 
 /*fade in and up animation*/
 
-.animate{
+.animate {
   -webkit-animation-duration: 800ms;
   animation-duration: 800ms;
   animation-fill-mode: both;
   animation-name: fadeInUp;
 }
 
-@keyframes fadeInUp{
-  0%{
+@keyframes fadeInUp {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-100%{
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
