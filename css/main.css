@@ -27,7 +27,7 @@ body {
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  padding: 5rem 0 4rem 0;
+  padding: 5rem 0 2rem 0;
 }
 
 .header {
