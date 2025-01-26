@@ -8,13 +8,13 @@
 }
 
 :root {
-  --bg-color: #212831;
-  --secondary-color: #151b23;
-  --Tertiary-colors: #262c36;
-  --text-color: #d1d7e0;
-  --accent-color: #347d39;
-  --shadow-color: rgba(167, 157, 255, 0.4);
-  --border-color: rgb(128, 168, 255);
+  --bg-color: hsl(0, 0%, 6%);
+  --primary-color: hsl(0, 0%, 15%);
+  --secondary-color: hsl(0, 0%, 25%);
+  --text-color: hsl(216, 19%, 85%);
+  --accent-color: hsl(221, 100%, 75%);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --glow-color: rgba(167, 157, 255, 0.4);
 }
 
 html {
@@ -39,8 +39,7 @@ body {
   right: 0;
   left: 0;
   height: 3rem;
-  border-bottom: 1px solid var(--shadow-color);
-  background-color: var(--secondary-color);
+  background-color: var(--bg-color);
   padding: 0 1.5rem;
   align-items: center;
 }
@@ -55,22 +54,6 @@ body {
 
 .header img {
   height: 1.125rem;
-}
-
-.footer {
-  z-index: 100;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  text-align: center;
-  font-size: 0.8rem;
-  border-top: 1px solid var(--shadow-color);
-  background-color: var(--secondary-color);
-  color: white;
-  margin-top: auto;
-  padding: 0.25rem 0;
-  font-weight: 500;
 }
 
 /*fade in and up animation*/
