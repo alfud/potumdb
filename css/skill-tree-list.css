@@ -1,19 +1,19 @@
-main{
- display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr;
- justify-items: center;
- gap: 2rem; 
- padding-left: 2rem;
- padding-right: 2rem;
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.skill-class{
+.skill-class {
   font-size: 1.5rem;
   font-weight: 500;
   min-width: 19rem;
   max-width: 19rem;
-  padding: 0.4rem 0.8rem 0.4rem 0.5rem ;
-  border: 2px solid var(--border-color);
+  padding: 0.4rem 0.8rem 0.4rem 0.5rem;
+  border: 2px solid var(--accent-color);
   border-radius: 50rem;
   background-color: var(--secondary-color);
   color: var(--text-color);
@@ -23,18 +23,18 @@ main{
   transition: transform 0.3s ease;
 }
 
-.skill-class:hover{
+.skill-class:hover {
   transform: scale(1.1);
   box-shadow: 0 0 0.5rem 0.25rem var(--shadow-color);
 }
 
-.skill-class-icon-container{
-display: flex;
-align-content: center;
-margin-right: 0.6rem;
+.skill-class-icon-container {
+  display: flex;
+  align-content: center;
+  margin-right: 0.6rem;
 }
 
-.skill-class-icon-container img{
+.skill-class-icon-container img {
   height: 2rem;
   background-color: #00000090;
   padding: 1px;
@@ -42,20 +42,20 @@ margin-right: 0.6rem;
   border-radius: 50rem;
 }
 
-@media (max-width: 85rem){
-  main{
+@media (max-width: 85rem) {
+  main {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (max-width: 60rem){
-  main{
+@media (max-width: 60rem) {
+  main {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 37rem){
-  main{
+@media (max-width: 37rem) {
+  main {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding-left: 1rem;
