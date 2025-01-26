@@ -8,10 +8,10 @@
 }
 
 :root {
-  --bg-color: hsl(0, 0%, 6%);
-  --primary-color: hsl(0, 0%, 15%);
-  --secondary-color: hsl(0, 0%, 25%);
-  --text-color: hsl(216, 19%, 85%);
+  --bg-color: #0e1117;
+  --primary-color: hsl(234, 12%, 20%);
+  --secondary-color: hsl(228, 16%, 12%);
+  --text-color: hsl(0, 0%, 90%);
   --accent-color: hsl(221, 100%, 75%);
   --shadow-color: rgba(0, 0, 0, 0.4);
   --glow-color: rgba(167, 157, 255, 0.4);
