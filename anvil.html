@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="ToramDB, Toram Online, Game Guide, MMORPG, Android Game, iOS Game, Asobimo, Toram Online Database, Skill list, Bag Expansion, MQ exp, Quest Calculator" />
+  <meta name="description" content="Toram Online Database" />
+  <link rel='shortcut icon' type='image/x-icon' href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/anvil.css">
+  <title>Anvil Range Calculator</title>
+</head>
+
+<body>
+  <header class="header">
+    <div>
+      <a href="/index.html">
+        <img src="/media/logo.svg" alt="ToramDB logo">
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="https://discord.com/users/1053259863569989652">
+        <img src="/media/discord.svg" alt="contact">
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <h1>Anvil Range Calculator</h1>
+    <form id="anvilForm">
+      <label for="baseValue">Base WATK/DEF:</label>
+      <input type="number" id="baseValue" required>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div class="output" id="output">
+      <h2>Results:</h2>
+      <table id="resultsTable">
+        <thead>
+          <tr>
+            <th>Anvil Color</th>
+            <th>0 Slot</th>
+            <th>1 Slot</th>
+            <th>2 Slots</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Blue</td>
+            <td id="blue0"></td>
+            <td id="blue1">N/A</td>
+            <td id="blue2">N/A</td>
+          </tr>
+          <tr>
+            <td>Green</td>
+            <td id="green0"></td>
+            <td id="green1"></td>
+            <td id="green2">N/A</td>
+          </tr>
+          <tr>
+            <td>Yellow</td>
+            <td id="yellow0"></td>
+            <td id="yellow1"></td>
+            <td id="yellow2">N/A</td>
+          </tr>
+          <tr>
+            <td>Red</td>
+            <td id="red0"></td>
+            <td id="red1"></td>
+            <td id="red2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="color: #ff4e4e;font-weight: 700; padding-top: 2rem;">Output may not be 100% accurate</div>
+
+  </main>
+
+  <script src="/js/anvil.js"></script>
+
+</body>
+
+</html>

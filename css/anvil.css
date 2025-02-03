@@ -1,0 +1,57 @@
+main{
+  padding: 1.5rem;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+input{
+  background-color: var(--secondary-color);
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.4rem;
+}
+
+input:focus{
+  outline: 1px solid rgb(128, 168, 255);
+  border: none;
+  box-shadow: 0px 1px 4px 2px var(--shadow-color);
+}
+
+button{
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.output {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #04AA6D;
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
