@@ -63,5 +63,11 @@ body {
 }
 
 .header img {
-  height: 1.125rem;
+  height: 1.15rem;
+}
+
+.discord{
+  background-color: #5865F2;
+  padding: 0.5rem;
+  border-radius: 50rem;
 }
