@@ -7,11 +7,21 @@
   text-decoration: none;
 }
 
-:root {
+/* :root {
   --bg-color: hsl(0, 0%, 4%);
   --primary-color: hsl(0, 0%, 8%);
   --secondary-color: hsl(0, 0%, 15%);
   --text-color: hsl(0, 0%, 90%);
+  --accent-color: hsl(221, 100%, 75%);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --glow-color: rgba(167, 157, 255, 0.4);
+} */
+
+:root {
+  --bg-color: hsl(0, 0%, 100%);
+  --primary-color: #f9f9f9;
+  --secondary-color: #f2f2f2;
+  --text-color: hsl(0, 0%, 10%);
   --accent-color: hsl(221, 100%, 75%);
   --shadow-color: rgba(0, 0, 0, 0.4);
   --glow-color: rgba(167, 157, 255, 0.4);
