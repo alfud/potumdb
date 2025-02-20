@@ -15,16 +15,16 @@
   border-radius: 0.5rem;
   background-color: var(--secondary-color);
   color: var(--text-color);
-  box-shadow: 0 1px 2px 1px var(--shadow-color);
+  box-shadow: 0 0 2px 1px var(--shadow-color);
   align-content: center;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
   cursor: pointer;
 }
 
 .button:hover {
-  transform: scale(1.1);
-  box-shadow:  0 1px 2px 2px var(--glow-color);
+  transform: scale(1.02);
+  box-shadow:  0 0 0 2px var(--glow-color);
 }
 
 @media (min-width: 30rem) {
