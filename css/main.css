@@ -33,7 +33,7 @@ html {
 
 body {
   font-family: Noto Sans, Arial;
-  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  /* font-size: clamp(0.75rem, 1.5vw, 1rem); */
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
