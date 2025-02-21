@@ -72,3 +72,22 @@ body {
 .discord img{
   height: 1rem;
 }
+
+.scroll-to-top {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  color: white;
+  cursor: pointer;
+  padding: 8px 8px 5px 8px;
+  border-radius: 0.5rem;
+}
+
+.scroll-to-top:hover {
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
