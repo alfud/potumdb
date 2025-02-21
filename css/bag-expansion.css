@@ -36,6 +36,9 @@ th {
 }
 
 @media (max-width: 30rem) {
+  main {
+    font-size: .7rem;
+  }
 
   td,
   th {
