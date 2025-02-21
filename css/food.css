@@ -42,7 +42,7 @@ main{
     border-radius: .5rem;
     padding: 1rem;
     display: grid;
-    grid-template-columns: 1fr 50px;
+    grid-template-columns: 1fr 30px;
 }
 
 .code>button{
