@@ -11,6 +11,16 @@ main{
     gap: 1rem;
 }
 
+@media screen and (min-width: 72rem){
+    main{
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .card-container{
+        grid-template-columns: 350px 350px 350px;
+    }
+}
+
 .card{
     border: 1px solid #e0e0e0;
     border-radius: .5rem;
@@ -31,4 +41,59 @@ main{
     border: 1px solid #e0e0e0;
     border-radius: .5rem;
     padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 50px;
 }
+
+.code>button{
+    padding: 0;
+    border: none;
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+
+.copy-btn{
+    content: url(/media/copy.svg);
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: .5rem;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 1rem;
+  }
+
+  .toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
