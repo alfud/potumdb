@@ -5,6 +5,27 @@ main{
     gap: 1rem;
 }
 
+#jump-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+#jump-link a{
+    background-color: hsl(46, 100%, 66%);
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+}
+
+#jump-link a:hover{
+    background-color: hsl(32, 100%, 66%);
+}
+
+h2{
+    scroll-margin-top: 4rem;
+}
+
 .card-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
