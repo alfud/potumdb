@@ -187,12 +187,12 @@ input[type=number] {
     padding: 0;
 }
 
-#mq-stopAt {
-    color: #5ecc5e;
+#mq-stopAt, #mq-stopAt>strong {
+    color: #40ad00;
 }
 
-#mq-startFrom {
-    color: #ff4e4e;
+#mq-startFrom, #mq-startFrom>strong {
+    color: #dd0000;
 }
 
 #skip-venena-label>span {
