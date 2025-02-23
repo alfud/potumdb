@@ -1,3 +1,5 @@
+// scrollToTop feature
+
 window.onscroll = function () {
     scrollFunction();
 };
