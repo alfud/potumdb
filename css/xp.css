@@ -14,7 +14,7 @@ body {
 }
 
 fieldset{
-    padding-block: 0;
+    padding-block: 4px;
 }
 
 .section>legend {
@@ -137,6 +137,7 @@ input[type=number] {
     width: 1.1em;
     height: 1.1em;
     margin-left: 3px;
+    fill: var(--text-color);
 }
 
 .text-center {
