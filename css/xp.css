@@ -47,13 +47,13 @@ input {
 }
 
 select {
-    padding:  0.25rem;
+    padding: .25rem .5rem;
 }
 
 select,
 input {
     background-color: var(--secondary-color);
-    border: 1px solid var(--shadow-color);
+    border: 1px solid var(--base-color);
     border-radius: 0.5rem;
     font-family: inherit;
 }
@@ -128,14 +128,15 @@ input[type=number] {
 .section>legend>div {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.section>legend>div>img,
+.section>legend>div>svg,
 .question-mark {
     cursor: pointer;
     width: 1.1em;
+    height: 1.1em;
     margin-left: 3px;
-    content: url(https://cdn1.iconfinder.com/data/icons/material-set-6/48/543-512.png);
 }
 
 .text-center {
@@ -162,6 +163,10 @@ input[type=number] {
 
 .radio-group>label:not(last-child) {
     margin-right: 1rem;
+}
+
+.col-1.grid.grid-1.nogap input{
+    margin-right: .5rem;
 }
 
 #quest-exp,
