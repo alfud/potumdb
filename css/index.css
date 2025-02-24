@@ -1,3 +1,7 @@
+main{
+  padding: 2rem 1.5rem;
+}
+
 .links {
   display: flex;
   flex-direction: column;
