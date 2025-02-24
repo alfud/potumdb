@@ -7,23 +7,25 @@
   text-decoration: none;
 }
 
-/* :root {
-  --bg-color: hsl(0, 0%, 4%);
-  --primary-color: hsl(0, 0%, 8%);
-  --secondary-color: hsl(0, 0%, 15%);
-  --text-color: hsl(0, 0%, 90%);
-  --accent-color: hsl(221, 100%, 75%);
-  --shadow-color: rgba(0, 0, 0, 0.4);
-  --glow-color: rgba(167, 157, 255, 0.4);
-} */
-
 :root {
   --bg-color: hsl(0, 0%, 100%);
-  --primary-color: #f9f9f9;
-  --secondary-color: #f2f2f2;
+  --primary-color: hsl(0, 0%, 98%);
+  --secondary-color: hsl(0, 0%, 95%);
+  --base-color: hsl(0, 0%, 50%);
   --text-color: hsl(0, 0%, 10%);
   --accent-color: hsl(221, 100%, 75%);
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --glow-color: rgba(99, 128, 255, 0.5);
+}
+
+.darkmode {
+  --bg-color: hsl(0, 0%, 4%);
+  --primary-color: hsl(0, 0%, 8%);
+  --secondary-color: hsl(0, 0%, 12%);
+  --base-color: hsl(0, 0%, 25%);
+  --text-color: hsl(0, 0%, 90%);
+  --accent-color: hsl(221, 100%, 75%);
+  --shadow-color: rgba(0, 0, 0, 0.4);
   --glow-color: rgba(99, 128, 255, 0.5);
 }
 
@@ -46,28 +48,60 @@ main{
   position: sticky;
   top: 0;
   background-color: var(--bg-color);
-  padding: .5rem 1.5rem;
+  padding: .625rem 1.5rem;
   align-items: center;
+}
+
+#header-icon-cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#theme-switch{
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--base-color);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#theme-switch svg{
+  fill: var(--text-color);
+}
+
+#theme-switch svg:last-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
 }
 
 .header a {
   /*this display flex centers the logo*/
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.header img {
-  height: 1.4rem;
+#potumdb-logo {
+  height: 1.5rem;
 }
 
 .discord{
   background-color: #5865F2;
-  padding: 0.5rem;
-  border-radius: 50rem;
-}
-
-.discord img{
-  height: 1rem;
+  padding: .5rem;
+  border-radius: 50%;
 }
 
 .scroll-to-top {

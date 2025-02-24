@@ -19,16 +19,16 @@ main{
   border-radius: 0.5rem;
   background-color: var(--secondary-color);
   color: var(--text-color);
-  box-shadow: 0 0 2px 1px var(--shadow-color);
+  box-shadow: 0 0 2px 2px var(--shadow-color);
   align-content: center;
   text-align: center;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .button:hover {
   transform: scale(1.02);
-  box-shadow:  0 0 0 2px var(--glow-color);
+  box-shadow: 0 0 4px 4px var(--glow-color);
 }
 
 @media (min-width: 30rem) {
