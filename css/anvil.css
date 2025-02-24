@@ -19,7 +19,7 @@ input:focus{
   box-shadow: 0px 1px 4px 2px var(--shadow-color);
 }
 
-button{
+#submit-btn{
   font-weight: 700;
   background-color: rgb(47, 113, 255);
   color: white;
