@@ -11,7 +11,7 @@
   --bg-color: hsl(0, 0%, 100%);
   --primary-color: hsl(0, 0%, 98%);
   --secondary-color: hsl(0, 0%, 95%);
-  --base-color: hsl(0, 0%, 50%);
+  --base-color: hsl(0, 0%, 70%);
   --text-color: hsl(0, 0%, 10%);
   --accent-color: hsl(221, 100%, 75%);
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -112,13 +112,10 @@ main{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: var(--base-color);
   color: white;
   cursor: pointer;
   padding: 8px 8px 5px 8px;
   border-radius: 0.5rem;
-}
-
-.scroll-to-top:hover {
-  background-color: hsla(0, 0%, 0%, 0.5);
+  opacity: .7;
 }
