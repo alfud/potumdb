@@ -73,8 +73,25 @@ h2{
     cursor: pointer;
 }
 
-.copy-btn{
-    content: url(/media/copy.svg);
+.copy-btn {
+    width: 1rem;
+    height: 1rem;
+}
+
+.copy-btn rect {
+    fill: none;
+    stroke: var(--text-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.copy-btn path {
+    fill: none;
+    stroke: var(--text-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .toast {
