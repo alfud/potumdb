@@ -1,3 +1,10 @@
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
 h1{
   margin-bottom: 10px;
 }
@@ -39,16 +46,25 @@ input:focus{
   border-radius: 8px;
   background-color: var(--primary-color);
 }
+
+@media (min-width: 42rem) {
+  .output{
+    width:  50vw;
+  }
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
 }
+
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
+
 th {
   background-color: #04AA6D;
 }

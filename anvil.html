@@ -62,54 +62,54 @@
 
   <main>
 
-    <h1>Anvil Range Calculator</h1>
-    <form id="anvilForm">
-      <label for="baseValue">Base WATK/DEF:</label>
-      <input type="number" id="baseValue" min="0" required>
-      <button id="submit-btn" type="submit">Calculate</button>
-    </form>
-
-    <div class="output" id="output">
-      <h2>Results:</h2>
-      <table id="resultsTable">
-        <thead>
-          <tr>
-            <th>Anvil Color</th>
-            <th>0 Slot</th>
-            <th>1 Slot</th>
-            <th>2 Slots</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Blue</td>
-            <td id="blue0"></td>
-            <td id="blue1">N/A</td>
-            <td id="blue2">N/A</td>
-          </tr>
-          <tr>
-            <td>Green</td>
-            <td id="green0"></td>
-            <td id="green1"></td>
-            <td id="green2">N/A</td>
-          </tr>
-          <tr>
-            <td>Yellow</td>
-            <td id="yellow0"></td>
-            <td id="yellow1"></td>
-            <td id="yellow2">N/A</td>
-          </tr>
-          <tr>
-            <td>Red</td>
-            <td id="red0"></td>
-            <td id="red1"></td>
-            <td id="red2"></td>
-          </tr>
-        </tbody>
-      </table>
+    <div>
+      <h1>Anvil Range Calculator</h1>
+      <form id="anvilForm">
+        <label for="baseValue">Base WATK/DEF:</label>
+        <input type="number" id="baseValue" min="0" required>
+        <button id="submit-btn" type="submit">Calculate</button>
+      </form>
+      <div class="output" id="output">
+        <h2>Results:</h2>
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Anvil Color</th>
+              <th>0 Slot</th>
+              <th>1 Slot</th>
+              <th>2 Slots</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Blue</td>
+              <td id="blue0"></td>
+              <td id="blue1">N/A</td>
+              <td id="blue2">N/A</td>
+            </tr>
+            <tr>
+              <td>Green</td>
+              <td id="green0"></td>
+              <td id="green1"></td>
+              <td id="green2">N/A</td>
+            </tr>
+            <tr>
+              <td>Yellow</td>
+              <td id="yellow0"></td>
+              <td id="yellow1"></td>
+              <td id="yellow2">N/A</td>
+            </tr>
+            <tr>
+              <td>Red</td>
+              <td id="red0"></td>
+              <td id="red1"></td>
+              <td id="red2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="color: #ff4e4e;font-weight: 700; padding-top: 2rem;">Output may be off by +/-1</div>
     </div>
-
-    <div style="color: #ff4e4e;font-weight: 700; padding-top: 2rem;">Output may be off by +/-1</div>
 
   </main>
 
