@@ -112,10 +112,10 @@ main{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   cursor: pointer;
   padding: 8px 8px 5px 8px;
-  border-radius: 0.5rem;
-  opacity: .8;
+  border-radius: 50%;
+  opacity: .5;
 }
