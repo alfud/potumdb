@@ -17,9 +17,8 @@ main{
   min-width: 75dvw;
   border: 1px solid var(--accent-color);
   border-radius: 0.5rem;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
-  box-shadow: 0 0 2px 2px var(--shadow-color);
   align-content: center;
   text-align: center;
   transition: transform 0.3s ease;
