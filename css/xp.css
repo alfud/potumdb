@@ -155,15 +155,51 @@ input[type=number] {
     }
 }
 
-.radio-group {
+.radio-container{
     display: flex;
     justify-content: center;
     align-content: center;
     gap: .25rem;
 }
 
-.radio-group>label:not(last-child) {
-    margin-right: 1rem;
+
+.radio-input{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 14rem;
+    font-size: 14px;
+}
+
+.radio-input label {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.radio-input label input {
+    display: none;
+}
+
+.radio-input label .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: var(--text-color);
+    transition: all .15s ease-in-out;
+}
+
+.radio-input label input:checked+.name {
+    background-color: var(--primary-color);
+    font-weight: 600;
 }
 
 .col-1.grid.grid-1.nogap input{
