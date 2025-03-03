@@ -302,7 +302,7 @@ const evaluateDiaries = function () {
 
         if (runs <= 100) {
             $("#mq-table-results").html(`
-                <div class="col-1 grid nogap" id="mq-table-header">
+                <div class="mq-table-grid" id="mq-table-header">
                     <div>N°</div>
                     <div style="text-align: left;">Final Chapter</div>
                     <div>Lv (%)</div>
@@ -320,7 +320,7 @@ const evaluateDiaries = function () {
         for (let i = 1; i <= runs; i++) {
             [lv, lvP] = addXP(lv, lvP, mqXP);
             $("#mq-table-results").append(`
-                <div class="col-1 grid nogap" id="mq-table-row">
+                <div class="mq-table-grid" id="mq-table-row">
                     <div>${i}</div>
                     <div>${$(`#mq-until option[value="${mqEnd}"]`).text()}</div>
                     <div>${lv} (${lvP}%)</div>
@@ -346,7 +346,7 @@ const evaluateDiaries = function () {
                 }
             }
             $("#mq-table-results").append(`
-                <div class="col-1 grid nogap" id="mq-table-row">
+                <div class="mq-table-grid" id="mq-table-row">
                     <div>${runs+1}</div>
                     <div>${$(`#mq-until option[value="${mqStopIndex}"]`).text()}</div>
                     <div>${lv} (${lvP}%)</div>
