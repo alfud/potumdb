@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-<url>
-  <loc>http://potumdb.pages.dev/index.html</loc>
-</url>
-<url>
-  <loc>http://potumdb.pages.dev/food.html</loc>
-</url>
-<url>
-  <loc>http://potumdb.pages.dev/xp.html</loc>
-</url>
-<url>
-  <loc>http://potumdb.pages.dev/bag-expansion.html</loc>
-</url>
-<url>
-  <loc>http://potumdb.pages.dev/anvil.html</loc>
-</url>
+  <url>
+    <loc>http://potumdb.pages.dev/index.html</loc>
+  </url>
+  <url>
+    <loc>http://potumdb.pages.dev/food.html</loc>
+  </url>
+  <url>
+    <loc>http://potumdb.pages.dev/xp.html</loc>
+  </url>
+  <url>
+    <loc>http://potumdb.pages.dev/bag-expansion.html</loc>
+  </url>
+  <url>
+    <loc>http://potumdb.pages.dev/anvil.html</loc>
+  </url>
+</urlset>
