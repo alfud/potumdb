@@ -29,7 +29,7 @@ h1 {
 legend {
     font-weight: 700;
     font-size: 1.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     text-decoration: underline;
     color: var(--accent-color);
 }
